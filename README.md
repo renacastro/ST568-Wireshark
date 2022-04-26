@@ -139,7 +139,14 @@ A interface de dados capturados é composto por três seções:
 
 
 ##### Lista de pacotes
-Teste
+Esse painel mostra todos os pacotes encontrados no arquivo de captura ativo. Cada linha corresponde a um pacote e as colunas, por padrão estão organizadas, da esquerda para a direita, em:
+- **Número (No.)**: apresenta o número do pacote (os pacotes são numerados na ordem de chegada à interface) e, ao selecionar um pacote, aponta quais os outros pacotes relacionados;
+- **Tempo (Time)**: exibe em que momento o pacote foi capturado, com o referencial no início da captura. A unidade é dada em segundos parciais;
+- **Fonte (Source)**: exibe o endereço (em geral IP ou MAC) a partir do qual o pacote foi originado;
+- **Destino (Destination)**: exibe o endereço (em geral IP ou MAC) para onde o pacote foi enviado;
+- **Protocolo (Protocol)**: exibe o nome do protocolo do pacote (em geral o Wireshark exibe o protocolo de Layer mais alta que ele consegue identificar);
+- **Comprimento (Length)**: exibe o comprimeito do pacote em bytes;
+- **Informações (Info)**: exibe detalhes adcionais do pacote, sendo que seu conteúdo varia demasiadamente a depender do conteúdo do pacote.
 
 
 ##### Detalhes do pacote
