@@ -140,7 +140,7 @@ A interface de dados capturados é composto por três seções:
 
 ##### Lista de pacotes
 Esse painel mostra todos os pacotes encontrados no arquivo de captura ativo. Cada linha corresponde a um pacote e as colunas, por padrão estão organizadas, da esquerda para a direita, em:
-- **Número (No.)**: apresenta o número do pacote (os pacotes são numerados na ordem de chegada à interface) e, ao selecionar um pacote, aponta quais os outros pacotes relacionados;
+- **Número (No.)**: apresenta o número do pacote (os pacotes são numerados na ordem de chegada à interface) e, quando um pacote é selecionado, símbolos aparecem. Colchetes abertos ou fechados e uma linha horizontal reta indicam se um pacote ou grupo de pacotes faz parte da mesma conversa de ida e volta na rede; uma linha horizontal interrompida significa que o pacote não faz parte da conversa;
 - **Tempo (Time)**: exibe em que momento o pacote foi capturado, com o referencial no início da captura. A unidade é dada em segundos parciais;
 - **Fonte (Source)**: exibe o endereço (em geral IP ou MAC) a partir do qual o pacote foi originado;
 - **Destino (Destination)**: exibe o endereço (em geral IP ou MAC) para onde o pacote foi enviado;
@@ -148,13 +148,15 @@ Esse painel mostra todos os pacotes encontrados no arquivo de captura ativo. Cad
 - **Comprimento (Length)**: exibe o comprimeito do pacote em bytes;
 - **Informações (Info)**: exibe detalhes adcionais do pacote, sendo que seu conteúdo varia demasiadamente a depender do conteúdo do pacote.
 
+Caso queira alterar a unidade da coluna **Tempo (Time)**, selecione **View > Time Display Format > ...** 
+
 
 ##### Detalhes do pacote
-A
+Esse painel apresenta os protocolos e campos de protocolo do pacote selecionado, organizados em seções expandíveis do primeiro ao último header. Aqui, filtros Wireshark individuais podem ser aplicados com base em detalhes específicos e fluxos de dados podem ser seguidos com base no tipo de protocolo, clicando com o botão direito do mouse no item desejado.
 
 
 ##### Bytes do pacote
-A
+Esse painel apresenta os dados brutos do pacote selecionado em bytes no formato hexadecimal. Esse dump hexadecimal contém 16 bytes hexadecimais e 16 bytes ASCII junto com o deslocamento de dados. A seleção de uma parte específica desse pacote (tanto no formado hexadecimal quanto no ASCII) destaca automaticamente sua seção correspondente no painel de detalhes do pacote e vice-versa. Todo byte que não possui correspondente no código ASCII é representado por um ponto.
 
 
 #### Filtros
