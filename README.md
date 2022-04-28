@@ -173,8 +173,18 @@ Caso tenha a necessidade de utilizar um mesmo filtro em várias capturas, é pos
 ![Alt text](images/wireshark-predefined-filters.png "Wireshark Predefined Filters")
 
 ##### Alguns filtros muito utilizados
-- **Filtrar por IP de origem**: *ip.src==o.endereço.desejado.aqui*
+- **IP de origem**: *ip.src==o.endereço.desejado.aqui*
 - **IP de destino**: *ip.src==o.endereço.desejado.aqui*
+- **Endereço IP**: *ip.addr==o.endereço.desejado.aqui*
+- **Método de requisição HTTP**: *http.request.method=="metodo_desejado"*
+- **URI**: *http.request.uri=="/a/uri/do/site.html*
+- **Porta TCP**: *tcp.port==123456*
+- **Flag TCP**: *tcp.flags*
+- **Porta UDP**: *udp.port==123456* 
+- **ARP**: *arp*
+- **Ignorar ARP**: *!arp*
+- **ICMP**: *icmp*
+- **Ignorar ICMP**: *!icmp*
 
 
 #### Regras de cores
