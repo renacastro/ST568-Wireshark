@@ -168,6 +168,14 @@ No Wireshark existem dois tipos de filtros:
 
 Em qualquer um dos dois campos de inserção de filtros existe o recurso de preenchimento automático, o qual sugere nomes de filtros a medida que é digitado.
 
+Caso tenha a necessidade de utilizar um mesmo filtro em várias capturas, é possível salvar e editar filtros pré-definidos para que não seja necessário adcionar a expressão manualmente. Tais filtros podem ser encontrados no símbolo de bandeirola ao lado dos campos de digitação dos filtros. Para adcionar, excluir ou editar estes filtros, clique na bandeirola e, em seguida, em *Manage Display Filters* ou *Manage Capture Filters*.
+
+![Alt text](images/wireshark-predefined-filters.png "Wireshark Predefined Filters")
+
+##### Alguns filtros muito utilizados
+- **Filtrar por IP de origem**: *ip.src==o.endereço.desejado.aqui*
+- **IP de destino**: *ip.src==o.endereço.desejado.aqui*
+
 
 #### Regras de cores
 A
