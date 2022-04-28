@@ -160,7 +160,13 @@ Esse painel apresenta os dados brutos do pacote selecionado em bytes no formato 
 
 
 #### Filtros
-A
+![Alt text](images/wireshark-filters.png "Wireshark Filters")
+
+No Wireshark existem dois tipos de filtros:
+1. **Filtro de exibição**: está presente tanto na tela de boas vindas quanto na tela de análise dos pacotes. Ele serve para filtrar os pacotes previamente capturados e exibir apenas os solicitados. Para aplicá-lo, basta digitar o nome do filtro no campo "*Apply a display filter*", localizado logo abaixo da barra de ferramentas.
+2. **Filtro de captura**: está presente apenas na tela de boas vindas. Ele serve para que o Wireshark capture apenas os pacotes correspondentes ao filtro. Para aplicá-lo, basta digitar o nome do filtro no campo "*Enter a capture filter*", localizado dentro da tela de boas vindas e antes das interfaces de captura.
+
+Em qualquer um dos dois campos de inserção de filtros existe o recurso de preenchimento automático, o qual sugere nomes de filtros a medida que é digitado.
 
 
 #### Regras de cores
