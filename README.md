@@ -164,7 +164,7 @@ Esse painel apresenta os dados brutos do pacote selecionado em bytes no formato 
 
 No Wireshark existem dois tipos de filtros:
 1. **Filtro de exibição**: está presente tanto na tela de boas vindas quanto na tela de análise dos pacotes. Ele serve para filtrar os pacotes previamente capturados e exibir apenas os solicitados. Para aplicá-lo, basta digitar o nome do filtro no campo "*Apply a display filter*", localizado logo abaixo da barra de ferramentas.
-2. **Filtro de captura**: está presente apenas na tela de boas vindas. Ele serve para que o Wireshark capture apenas os pacotes correspondentes ao filtro. Para aplicá-lo, basta digitar o nome do filtro no campo "*Enter a capture filter*", localizado dentro da tela de boas vindas e antes das interfaces de captura.
+2. **Filtro de captura**: está presente apenas na tela de boas vindas. Ele serve para que o Wireshark capture apenas os pacotes correspondentes ao filtro. Para aplicá-lo, basta digitar o nome do filtro no campo "*Enter a capture filter*", localizado dentro da tela de boas vindas e antes das interfaces de captura. Esse tipo de filtro não pode ser modificado após a captura ser iniciada!
 
 Em qualquer um dos dois campos de inserção de filtros existe o recurso de preenchimento automático, o qual sugere nomes de filtros a medida que é digitado.
 
@@ -188,12 +188,35 @@ Caso tenha a necessidade de utilizar um mesmo filtro em várias capturas, é pos
 
 
 #### Regras de cores
-A
+Além de filtros de captura e exibição, o Wireshark também possui regras de cores para poder distinguir diferentes pacotes. Tal esquema de cores facilita a visualização de um conjunto de pacotes para que seja possível diagnosticar problemas na rede mais rapidamente.
+
+Por padrão existem 20 regras de cores no Wireshark, mas esse é um recurso totalmente modificável, sendo possível adcionar, excluir e editar regras para melhorar a visualização. Para isso, vá para **View > Coloring rules...** 
+
+Para habilitar e desabilitar o recurso, vá para **View > Colorize Packet List**
+
+![Alt text](images/wireshark-coloring-rules-list.png "Wireshark Coloring Rules")
+
+Por padrão, o background de pacotes UDP é azul claro, enquanto que o de pacotes TCP é roxo claro. Fique atento aos pacotes com background em preto, pois eles indicam erros ou mudanças na rede!
 
 
-#### Estatísticas
-A
+#### Estatísticas de rede
+Métricas sobre a rede estão disponíveis no menu **Statistics**. Ele traz várias métricas que vão desde informações sobre tempo e tamanho até representações gráficas. Também é possível aplicar filtros de exibição a essas estatísticas para poder exibir apenas informações sobre o tráfego relevante.
 
+![Alt text](images/wireshark-statistics-menu.png "Wireshark Statistics Menu")
+
+Aqui estão alguns exemplos de estatísticas:
+- **Protocol Hierarchy**: retorna uma janela com uma tabela de todos os protocolos capturados. Caso algum filtro de exibição esteja ativo, ele será referenciado na parte de baixo da janela;
+- **Conversations**: mostra estatísticas sobre a conversa entre dois computadores quaisquer;
+- **Endpoint**: mostra uma lista de endereços presentes na captura e suas estatísticas. Em endereços Ethernet, é possível ativar o "*Name resolution*" para descobrir qual a fabricante do dispositivo (ou placa de rede). Em endereços IP, além das estatísticas relacionadas ao envio e recebimento de pacotes, também existem informações relacionadas ao GeoIP (em que país e cidade se encontra o dispositivo) e ao Autonomous System (identificação do "dono" do endereço IP - [mais informações disponíveis aqui](https://www.cloudflare.com/pt-br/learning/network-layer/what-is-an-autonomous-system/));
+- **IO Graphs**: exibe um gráfico dos pacotes durante a captura. O conteúdo do gráfico é totalmente personalizável, sendo possível adcionar várias séries de dados (com o uso de filtros de exibição), escolher o tipo de gráfico para cada série (linha, barra, impulso, pontos), eixos, entre outros;
+- **Service Response Time**: exibe o tempo de resposta entre a solicitação e a resposta da rede (funciona apenas para alguns prococolos específicos como SCSI, SMB, SMB2, RADUIS LDAP...);
+- **DNS**: retorna uma janela com uma tabela com estatísticas acerca do DNS.
+
+Além do menu **Statistics**, existe um menu separado chamado **Telephony**, o qual traz estatísticas relacionadas à protocolos puramente de telefonia (a exemplo dos submenus VoIP, GSM, LTE e SIP), como também outros que também são utilizados em streams multimídia, como transmissões de IPTV ou videochamadas (a exemplo dos submenus RTP e RTSP).
+
+
+### Amostras de capturas
+Nesse laboratório você irá realizar uma captura a partir de sua própria máquina mas, caso queira se divertir analisando capturas com protocolos que dificilmente aparecerão em sua rede doméstica (como GSM, UTMS ou STP), é possível encontrá-las na [própria Wiki do Wireshark](https://wiki.wireshark.org/SampleCaptures#sample-captures).
 
 
 ## ENTENDENDO A DIFERENÇA ENTRE HTTP E HTTPS
