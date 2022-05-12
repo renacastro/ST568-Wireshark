@@ -192,7 +192,7 @@ Além de filtros de captura e exibição, o Wireshark também possui regras de c
 
 Por padrão existem 20 regras de cores no Wireshark, mas esse é um recurso totalmente modificável, sendo possível adcionar, excluir e editar regras para melhorar a visualização. Para isso, vá para **View > Coloring rules...** 
 
-Para habilitar e desabilitar o recurso, vá para **View > Colorize Packet List**
+Para habilitar e desabilitar o recurso, vá para **View > Colorize Packet List**.
 
 ![Alt text](images/wireshark-coloring-rules-list.png "Wireshark Coloring Rules")
 
@@ -220,3 +220,17 @@ Nesse laboratório você irá realizar uma captura a partir de sua própria máq
 
 
 ## ENTENDENDO A DIFERENÇA ENTRE HTTP E HTTPS
+Nesse laboratório, será necessário bootar o Windows caso utilize os computadores da informática.
+
+Iremos acessar um site com uma página de login que passa as credenciais do usuário ao servidor via texto simples, ou seja, a proteção dos dados de autenticação depende única e exclusivamente da criptografia TLS da camada 6 (apresentação) do modelo OSI.
+
+Passos para a execução do laboratório:
+1. Abra o Wireshark e o navegador web de sua preferência;
+2. Em vista de facilitar a visualização dos dados, utilize filtros de captura para limitá-la ao protocolo **TCP** nas portas **80** e **443**. O site pode ser fornecido por dois endereços IP: **104.21.62.150** e **172.67.136.182**;
+3. Inicie a captura de pacotes;
+4. Acesse o site seguro **https://st568.l4ti.net.br**;
+5. No campo *usuário*, digite **labredes** e, no campo *senha*, digite **senhaforte**;
+6. Clique em login e espere a página carregar;
+7. Pare a captura e analise os pacotes. Você verá que não é sequer possível descobrir se a aplicação usada foi mesmo HTTP, pois o Wireshark não consegue compreender nada após o header TLS devido à criptografia;
+8. Reinicie a captura e siga novamente os passos, porém agora acessando a versão não segura do site: **http://st568.l4ti.net.br**;
+9. Dentre os pacotes nos quais o servidor é o destino, será possível visualizar as credenciais de login.
