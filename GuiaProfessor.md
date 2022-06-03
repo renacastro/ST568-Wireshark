@@ -15,19 +15,23 @@ Iremos verificar qual a possível falta de segurança gerada caso a conexão com
 		~~~
 2. Abra o Wireshark e inicie a captura;
 3. Abra o navegador e digite a URL **http://st568.l4ti.net.br**;
-4. Clique em *Criar Sala*;
-5. Insira uma senha no campo *Insira uma senha* e clique em *Criar Sala*;
-6. Pare a captura do Wireshark;
-7. Adcione o seguinte filtro:
+4. Na página de login, utilize as credenciais:
+	- Usuário: leon
+	- Senha: Senhaforte
+5. Clique em *Entrar*;
+7. Pare a captura do Wireshark;
+8. Adcione o seguinte filtro:
 ~~~
 (ip.addr==Endereço1 or ip.addr==Endereço2) and http.request.method==POST
 ~~~
-8. Procure pelo pacote com URI */create-room/;
-9. No painel de detalhes do pacote, clique na linha *HTML Transfer Protocol* e evidencie a senha digitada no campo password;
+8. Procure pelo pacote com URI */login;
+9. No painel de detalhes do pacote, clique na linha *HTML Transfer Protocol* e evidencie o usuário digitado no campo *user* e a senha, no campo *password*;
 10. Inicie uma nova captura;
 11. Abra o navegador e digite a URL **https://st568.l4ti.net.br**;
-12. Clique em *Criar Sala*;
-13. Insira uma senha no campo *Insira uma senha* e clique em *Criar Sala*;
+12.  Na página de login, utilize as credenciais:
+	- Usuário: leon
+	- Senha: Senhaforte
+13. Clique em *Entrar*;
 14. Pare a captura do Wireshark;
 15. Adcione o seguinte filtro:
 ~~~
