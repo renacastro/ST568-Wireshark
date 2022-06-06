@@ -1,4 +1,6 @@
 # Laboratório de Redes de Comunicação (ST568) - WIRESHARK
+### Renato de Castro Ferreira - r187770@dac.unicamp.br - FT/Unicamp
+### André Leon S. Gradvohl - gradvohl@unicamp.br - FT/Unicamp
 
 ## INSTALAÇÃO DO WIRESHARK
 ### Windows
