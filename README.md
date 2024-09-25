@@ -1,6 +1,4 @@
-# Laboratório de Redes de Comunicação (ST568) - WIRESHARK
-### Renato de Castro Ferreira - r187770@dac.unicamp.br - FT/Unicamp
-### André Leon S. Gradvohl - gradvohl@unicamp.br - FT/Unicamp
+# Tutorial WIRESHARK
 
 ## INSTALAÇÃO DO WIRESHARK
 ### Windows
@@ -230,9 +228,9 @@ Passos para a execução do laboratório:
 1. Abra o Wireshark e o navegador web de sua preferência;
 2. Em vista de facilitar a visualização dos dados, utilize filtros de captura para limitá-la ao protocolo **TCP** nas portas **80** e **443**. O site pode ser fornecido por dois endereços IP: **104.21.62.150** e **172.67.136.182**;
 3. Inicie a captura de pacotes;
-4. Acesse o site seguro **https://st568.l4ti.net.br**;
+4. Acesse o site seguro **https://null**;
 5. No campo *usuário*, digite **labredes** e, no campo *senha*, digite **senhaforte**;
 6. Clique em login e espere a página carregar;
 7. Pare a captura e analise os pacotes. Você verá que não é sequer possível descobrir se a aplicação usada foi mesmo HTTP, pois o Wireshark não consegue compreender nada após o header TLS devido à criptografia;
-8. Reinicie a captura e siga novamente os passos, porém agora acessando a versão não segura do site: **http://st568.l4ti.net.br**;
+8. Reinicie a captura e siga novamente os passos, porém agora acessando a versão não segura do site: **http://null**;
 9. Dentre os pacotes nos quais o servidor é o destino, será possível visualizar as credenciais de login.
