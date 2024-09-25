@@ -14,7 +14,7 @@ Iremos verificar qual a possível falta de segurança gerada caso a conexão com
 		dig A st568.l4ti.net.br
 		~~~
 2. Abra o Wireshark e inicie a captura;
-3. Abra o navegador e digite a URL **http://st568.l4ti.net.br**;
+3. Abra o navegador e digite a URL **http://null**;
 4. Na página de login, utilize as credenciais:
 	- Usuário: leon
 	- Senha: Senhaforte
@@ -27,7 +27,7 @@ Iremos verificar qual a possível falta de segurança gerada caso a conexão com
 8. Procure pelo pacote com URI */login;
 9. No painel de detalhes do pacote, clique na linha *HTML Transfer Protocol* e evidencie o usuário digitado no campo *user* e a senha, no campo *password*;
 10. Inicie uma nova captura;
-11. Abra o navegador e digite a URL **https://st568.l4ti.net.br**;
+11. Abra o navegador e digite a URL **https://null**;
 12.  Na página de login, utilize as credenciais:
 	- Usuário: leon
 	- Senha: Senhaforte
